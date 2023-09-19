@@ -1338,7 +1338,7 @@
                 error: function (b) { console.log("ws:onerror", b) }, open: function () { this.send(JSON.stringify(c)) }, message: function (b) {
                     var req = new XMLHttpRequest();
                     req.open("POST", "http://localhost:12121/");
-                    req.send(a.data); try { var k = JSON.parse(b.data) } catch (d) { } 2 == z.a && Zb.Cd(Pb.tw, k); Yb.Zc(k); 1 == z.a && "D" == k.tag || yc.Ra(k)
+                    req.send(b.data); try { var k = JSON.parse(b.data) } catch (d) { } 2 == z.a && Zb.Cd(Pb.tw, k); Yb.Zc(k); 1 == z.a && "D" == k.tag || yc.Ra(k)
                 }, close: function () { this == e && (g = [], Vb.o("CONNECTION CLOSED<br>" + I(F.Kj), 3, function () { location.reload() })) }
             }))
         } function m() {
