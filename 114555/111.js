@@ -2272,7 +2272,7 @@
                         this.timers.push(setTimeout((()=>{
                             Bt.post("/api/getflag").then((e=>{
                                 const t = e.data;
-                                t.success ? alert("恭喜你，flag 是：" + t.flag) : alert("获取 flag 失败，原因：" + t.flag)
+                                t.success ? alert("恭喜你，flag 是：" + t.flag) : alert("获取 flag 失败，原因：" + t)
                             }
                             )).catch((()=>{
                                 alert("网络错误，请刷新页面重新开始")
