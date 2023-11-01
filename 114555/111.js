@@ -2280,7 +2280,10 @@
                                                 })
                                             }, 1000 + 1e3 * n.delay);
                                         }
-                                        iii++;
+                                        setTimeout(function () {
+                                            iii++
+                                        }, 1000 + 1e3 * n.delay);
+
                                     }
                                     this.timers.push(setTimeout((() => {
                                         Bt.post("/api/getflag").then((e => {
