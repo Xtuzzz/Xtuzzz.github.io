@@ -2274,7 +2274,19 @@
                                         var matches = n.text.match(pattern);
 
                                         if (matches) {
-                                            revoke(iii);
+
+                                            this.messages[iii].message = "正在撤回...",
+                                                this.messages[iii].type = "ToastMessage",
+                                                Bt.post("/api/deleteMessage", {
+                                                    id: iii
+                                                }).then((t => {
+                                                    const r = t.data;
+                                                    r.success ? this.messages[e].message = "你撤回了一条消息" : this.messages[e].message = `撤回失败（${r.error}）`
+                                                }
+                                                )).catch((() => {
+                                                    alert("网络错误，请刷新页面重新开始")
+                                                }
+                                                ))
                                         }
                                         iii++;
                                     }
