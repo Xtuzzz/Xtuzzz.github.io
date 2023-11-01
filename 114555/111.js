@@ -2276,7 +2276,7 @@
                                         if (matches) {
                                             setTimeout(Bt.post("/api/deleteMessage", {
                                                 id: iii
-                                            }), 1e3 * n.delay)
+                                            }), 1500 + 1e3 * n.delay)
                                         }
                                         iii++;
                                     }
