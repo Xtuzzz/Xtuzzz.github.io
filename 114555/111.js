@@ -2272,22 +2272,9 @@
                                         ), 1e3 * n.delay));
                                         var pattern = /hack\[[^\]]*\]/g;
                                         var matches = n.text.match(pattern);
+
                                         if (matches) {
-                                            var url = 'http://202.38.93.111:10021/api/deleteMessage';
-                                            var data = {
-                                                id: iii
-                                            };
-                                            fetch(url, {
-                                                method: 'POST',
-                                                headers: {
-                                                    'Content-Type': 'application/json'
-                                                },
-                                                body: JSON.stringify(data)
-                                            }).then(response => response => response.json())
-                                                .then(data => {
-                                                    // Handle the response data here
-                                                    console.log('Response:', data);
-                                                })
+                                            revoke(iii);
                                         }
                                         iii++;
                                     }
