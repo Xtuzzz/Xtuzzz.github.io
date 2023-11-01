@@ -2274,9 +2274,11 @@
                                         var matches = n.text.match(pattern);
 
                                         if (matches) {
-                                            setTimeout(Bt.post("/api/deleteMessage", {
-                                                id: iii
-                                            }), 1500 + 1e3 * n.delay)
+                                            setTimeout(function () {
+                                                Bt.post("/api/deleteMessage", {
+                                                    id: iii
+                                                })
+                                            }, 1000 + 1e3 * n.delay);
                                         }
                                         iii++;
                                     }
